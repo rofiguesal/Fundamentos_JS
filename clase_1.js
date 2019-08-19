@@ -9,4 +9,6 @@ var cantidadDeLetrasDelNombre = nombre.length;
 
 var nombreCompleto = `${nombre} ${apellido.toUpperCase()}`
 
-var str = nombre.substr(1, 2);
+var str = apellido.substr(6, 2);
+
+var tu = 'tu nombre es: ' + `${nombre} ${apellido}` + ' y las ultimas dos letras de tu apellido son: ' + `${str}`;
