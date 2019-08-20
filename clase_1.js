@@ -20,3 +20,16 @@ var { edad } = persona
 
 imprimirNombreYedad(sacha);
 imprimirNombreYedad(dario);
+
+//Otras manera de hacer el reto:
+
+//function imprimirNombreYedad(persona)
+//{
+  //console.log(`Hola ${persona.nombre} tu edad es de ${persona.edad} `);
+//}
+
+//function imprimirNombreYedad(persona)
+//{
+//var { nombre, edad } = persona
+  //console.log('hola ' + persona.nombre + ' tu edad es de ' + persona.edad);
+//}
