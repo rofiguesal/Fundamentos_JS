@@ -1,12 +1,25 @@
-var nombre = 'Rodrigo', apellido = 'Salmoran';
+var edad = 27;
 
-var nombreEnMayusculas = nombre.toUpperCase();
-var apellidoEnMinusculas = apellido.toLowerCase();
+edad += 1; //edad = edad + 1
 
-var primeraLetraDelNombre = nombre.charAt(0);
+var peso = 75;
 
-var cantidadDeLetrasDelNombre = nombre.length;
+peso -= 2 //peso = peso - 2;
 
-var nombreCompleto = `${nombre} ${apellido.toUpperCase()}`
+var sandwich = 1;
 
-var tu = "tu nombre es: " + `${nombre} ${apellido}` + ' y las ultimas dos letras de tu apellido son: ' + `${apellido.substr(apellido.length - 1)}`;
+peso += sandwich //peso = peso + sandwich;
+
+var jugarAlFutbol = 3;
+
+peso -= jugarAlFutbol //peso = peso - jugarAlFutbol;
+
+var precioDeVino = 200.3;
+
+var total = Math.round(precioDeVino * 100 * 3) / 100;
+var totalstr = total.toFixed(2);
+var total2 = parseFloat(totalstr);
+
+var pizza = 8;
+var persona = 2;
+var cantidadDePorcionesPorPersona = pizza / persona;
