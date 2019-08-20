@@ -1,4 +1,4 @@
-var nombre = 'Rodrigo', apellido = 'Figueroa';
+var nombre = 'Rodrigo', apellido = 'Salmoran';
 
 var nombreEnMayusculas = nombre.toUpperCase();
 var apellidoEnMinusculas = apellido.toLowerCase();
@@ -9,6 +9,4 @@ var cantidadDeLetrasDelNombre = nombre.length;
 
 var nombreCompleto = `${nombre} ${apellido.toUpperCase()}`
 
-var str = apellido.substr(6, 2);
-
-var tu = 'tu nombre es: ' + `${nombre} ${apellido}` + ' y las ultimas dos letras de tu apellido son: ' + `${str}`;
+var tu = "tu nombre es: " + `${nombre} ${apellido}` + ' y las ultimas dos letras de tu apellido son: ' + `${apellido.substr(apellido.length - 1)}`;
