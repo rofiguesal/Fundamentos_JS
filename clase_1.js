@@ -1,8 +1,9 @@
-var nombre = 'Rodrigo', apellido = 'Figueroa';
-var edad = '28 años';
+var x = 4, y = '4';
 
-console.log('Hola ' + nombre + ' ' + apellido);
+var sacha = {
+  nombre: 'sacha'
+}
 
-console.log('Tengo ' + edad);
-
-var peso = 75;
+var otraPersona = {
+  nombre: 'sacha'
+}
