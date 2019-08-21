@@ -74,6 +74,10 @@ const MAYORIA_DE_EDAD = 18;
 
 const esMayordeEdad = ({edad}) => edad >= MAYORIA_DE_EDAD;
 
+//Reto de la clase
+
+const Es_Menor_De_Edad = ({edad})=> edad < MAYORIA_DE_EDAD;
+
 function imprimirSiEsMayorDeEdad(persona) {
   console.log(`${persona.nombre} es `);
   if (esMayordeEdad(persona)) {
@@ -89,7 +93,7 @@ imprimirSiEsMayorDeEdad(berta);
 imprimirSiEsMayorDeEdad(lila);
 
 function permitirAcceso(persona) {
-  if (!esMayordeEdad(persona)) {
+  if (Es_Menor_De_Edad(persona)) {
     console.log('Accesso Denegado');
   }
 }
