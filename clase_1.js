@@ -10,8 +10,6 @@ var sacha = {
   drone: true
 }
 
-//parte del reto de la clase.
-
 var lila = {
   nombre: 'lila',
   edad: 42
@@ -68,14 +66,15 @@ function imprimirProfesiones(persona) {
 
 }
 
-imprimirProfesiones(sacha);
+const MAYORIA_DE_EDAD = 18;
 
-//Reto hacer que la funcion te muestre si es mayo de edad o no.
+function esMayordeEdad(persona) {
+  return persona.edad >= MAYORIA_DE_EDAD;
+}
 
 function imprimirSiEsMayorDeEdad(persona) {
-  console.log(`${persona.nombre} es: `);
-
-  if (persona.edad >= 18) {
+  console.log(`${persona.nombre} es `);
+  if (esMayordeEdad(persona)) {
     console.log('mayor de edad');
   } else {
     console.log('menor de edad');
