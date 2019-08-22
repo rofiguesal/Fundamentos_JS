@@ -45,3 +45,11 @@ const esAlta = ({altura}) => altura >= 1.8;
 var personasAltas = personas.filter(esAlta);
 
 console.log(personasAltas);
+
+//Reto de la clase
+
+const esBaja = ({altura}) => altura < 1.8;
+
+var personasBajas = personas.filter(esBaja);
+
+console.log(personasBajas);
