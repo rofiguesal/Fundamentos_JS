@@ -44,12 +44,14 @@ const esAlta = ({altura}) => altura >= 1.8;
 
 var personasAltas = personas.filter(esAlta);
 
-console.log(personasAltas);
+//altura = altura * 100;
+//persona.altura *= 100;
 
-//Reto de la clase
+const pasarAlturaACms = persona => ({
+    ...persona,
+    altura: persona.altura * 100
+})
 
-const esBaja = ({altura}) => altura < 1.8;
+var personasCms = personas.map(pasarAlturaACms);
 
-var personasBajas = personas.filter(esBaja);
-
-console.log(personasBajas);
+console.log(personasCms);
