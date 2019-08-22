@@ -19,7 +19,7 @@ var roberto = {
 var vicky = {
   nombre: 'Vicky',
   apellido: 'De la paz',
-  altura: 1.79
+  altura: 1.59
 }
 
 var xavier = {
@@ -36,7 +36,12 @@ var alan = {
 
 var personas = [sacha, rodrigo, roberto, vicky, xavier, alan];
 
-for (var i = 0; i < personas.length; i++) {
-  var persona = personas[i];
-  console.log(`${persona.nombre} mide ${persona.altura} mts`);
-}
+//var personasAltas = personas.filter(function (persona) {
+  //return persona.altura >= 1.8;
+//}) es igual a lo de abajo.
+
+const esAlta = ({altura}) => altura >= 1.8;
+
+var personasAltas = personas.filter(esAlta);
+
+console.log(personasAltas);
