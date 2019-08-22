@@ -5,6 +5,8 @@ var sacha = {
   peso: 75
 }
 
+console.log(`Al inicio del año ${sacha.nombre} pesa ${sacha.peso} kg`);
+
 const Incremento_Peso = 0.200;
 
 const Dias_Del_Año = 365;
@@ -13,16 +15,20 @@ const aumentarDePeso = persona => persona.peso += Incremento_Peso;
 
 const adelgaza = persona => persona.peso = persona.peso - Incremento_Peso;
 
-console.log(`Al inicio del año ${sacha.nombre} pesa ${sacha.peso} kg`);
+const comeMucho = () => Math.random() < 0.3;
+const realizaDeporte = () => Math.random() < 0.4;
 
-for (var i = 1; i <= Dias_Del_Año; i++) {
-  var random = Math.random()
+const META = sacha.peso - 3;
+var dias = 0
 
-  if (random < 0.25) {
+while (sacha.peso > META) {
+  if (comeMucho()) {
     aumentarDePeso(sacha);
-  } else if (random < 0.5) {
+  }
+  if (realizaDeporte()) {
     adelgaza(sacha);
   }
+  dias += 1
 }
 
-console.log(`Al final del año ${sacha.nombre} pesa ${sacha.peso.toFixed(1)} kg`);
+console.log(`Pasaron ${dias} días hasta que ${sacha.nombre} adelgazó 3 kg`);
