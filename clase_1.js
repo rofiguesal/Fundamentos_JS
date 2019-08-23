@@ -8,11 +8,11 @@ function Persona(nombre, apellido, altura) {
 //problema resuelto, se puso la altura e hice que retornara si eran bajos o altos.
 
 Persona.prototype.saludar = function () {
-  if (this.altura > 1.8) {
-    console.log( `Hola me llamo ${this.nombre} ${this.apellido} y soy alto`);
-  } else {
-    console.log( `Hola me llamo ${this.nombre} ${this.apellido} y soy bajito`);
-  }
+  console.log(`Hola me llamo ${this.nombre} ${this.apellido}`);
+};
+
+Persona.prototype.SoyAlto = function () { //Es importante colocar juntas los protipos, para que pueda funcionar
+  return this.altura > 1.8;
 };
 
 var sacha = new Persona('Sacha', 'Lifszyc', 1.82);
