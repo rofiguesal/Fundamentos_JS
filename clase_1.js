@@ -1,13 +1,20 @@
-function Persona(nombre, apellido) {
+function Persona(nombre, apellido, altura) {
   this.nombre = nombre;
   this.apellido = apellido;
+  this.altura = altura;
   return this;
 }
 
+//problema resuelto, se puso la altura e hice que retornara si eran bajos o altos.
+
 Persona.prototype.saludar = function () {
-  console.log(`Hola me llamo ${this.nombre} ${this.apellido}`);
+  if (this.altura > 1.8) {
+    console.log( `Hola me llamo ${this.nombre} ${this.apellido} y soy alto`);
+  } else {
+    console.log( `Hola me llamo ${this.nombre} ${this.apellido} y soy bajito`);
+  }
 };
 
-var sacha = new Persona('Sacha', 'sanchez');
-var erika = new Persona('Ericka', 'Luna');
-var arturo = new Persona('Arutro', 'Gimenez');
+var sacha = new Persona('Sacha', 'Lifszyc', 1.82);
+var erika = new Persona('Ericka', 'Luna', 1.64);
+var arturo = new Persona('Arutro', 'Gimenez', 1.73);
