@@ -1,8 +1,13 @@
-var nombre = 'Rodrigo', apellido = 'Figueroa';
-var edad = '28 años';
+function Persona(nombre, apellido) {
+  this.nombre = nombre;
+  this.apellido = apellido;
+  return this;
+}
 
-console.log('Hola ' + nombre + ' ' + apellido);
+Persona.prototype.saludar = function () {
+  console.log(`Hola me llamo ${this.nombre} ${this.apellido}`);
+};
 
-console.log('Tengo ' + edad);
-
-var peso = 75;
+var sacha = new Persona('Sacha', 'sanchez');
+var erika = new Persona('Ericka', 'Luna');
+var arturo = new Persona('Arutro', 'Gimenez');
