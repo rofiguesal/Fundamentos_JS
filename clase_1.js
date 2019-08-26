@@ -1,30 +1,26 @@
- function Persona(nombre, apellido, altura) {
-  this.nombre = nombre;
-  this.apellido = apellido;
-  this.altura = altura;
-  return this;
+class Persona {
+  constructor(nombre, apellido, altura) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.altura = altura;
+    return this;
+  }
+
+  saludar(){
+    console.log(`Hola me llamo ${this.nombre} ${this.apellido}`);
+  }
+  SoyAlto(){
+    return this.altura > 1.8;
+  }
 }
 
-Persona.prototype.saludar = function () {
-  console.log(`Hola me llamo ${this.nombre} ${this.apellido}`);
-};
+class Desarrollador extends Persona { //extend es lo mismo de heredar
+  constructor(nombre, apellido, altura) {
+    super(nombre, apellido, altura); // super llama al prototipo padre
+    // Esto es lo mismo que poner: this.nombre = nombre;this.apellido = apellido; this.altura = altura
+  }
 
-Persona.prototype.SoyAlto = function () {
-  return this.altura > 1.8;
-};
-
-function Desarrollador(nombre, apellido) {
-  this.nombre = nombre;
-  this.apellido = apellido;
+  saludar(){
+    console.log(`Hola, me llamo ${this.nombre} ${this.apellido}`);
+  }
 }
-
-heredaDe(Desarrollador, Persona);
-
-Desarrollador.prototype.saludar = function () {
-  console.log(`Hola, me llamo ${this.nombre} ${this.apellido}`);
-};
-
-
-//var sacha = new Persona('Sacha', 'Lifszyc', 1.82);
-//var erika = new Persona('Ericka', 'Luna', 1.64);
-//var arturo = new Persona('Arturo', 'Gimenez', 1.73);
